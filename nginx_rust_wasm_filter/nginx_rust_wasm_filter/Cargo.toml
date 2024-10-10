@@ -1,0 +1,6 @@
+[package]
+name = "nginx_rust_wasm_filter"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

@@ -1,0 +1,23 @@
+{
+    "name": "Rust NGINX WASM Development",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "postCreateCommand": "rustup target add wasm32-wasi && sudo apt-get update && sudo apt-get install -y nginx",
+    "customizations": {
+      "vscode": {
+        "settings": {
+          "terminal.integrated.defaultProfile.linux": "/bin/bash"
+        },
+        "extensions": [
+          "rust-lang.rust-analyzer"
+        ]
+      }
+    },
+    "portsAttributes": {
+      "80": {
+        "label": "NGINX Server",
+        "onAutoForward": "notify"
+      }
+    },
+    "forwardPorts": [80]
+  }
+  
