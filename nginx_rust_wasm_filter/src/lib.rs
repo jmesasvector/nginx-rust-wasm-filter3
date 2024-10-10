@@ -54,7 +54,7 @@ async fn call_microservice() -> Result<String, Box<dyn std::error::Error>> {
     let res = client.get("http://microservice.url/api/data")
         .header("Authorization", "Bearer fixed_jwt_token")
         .send()
-        .await?; // Cambiado a await aquí
+        .await?; // Cambiado a await aquí.
 
-    Ok(res.text().await?) // Cambiado a await aquí
+    Ok(res.text().await?) // Cambiado a await aquí.
 }
