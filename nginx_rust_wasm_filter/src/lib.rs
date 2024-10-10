@@ -6,7 +6,6 @@ extern crate serde_json;
 use jwt::{decode, Algorithm, DecodingKey, Validation};
 use serde::{Deserialize, Serialize};
 use std::time::{SystemTime, UNIX_EPOCH};
-use tokio; // Importar Tokio para el contexto async
 
 #[derive(Debug, Serialize, Deserialize)]
 struct Claims {
